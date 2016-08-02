@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<div class="product">
+  <div class="images">
+    <div class="secondary-image">
+      <% @product_attachments.each do |p| %>
+      <p>
+        <%= image_tag p.image_url(:thumb) %>
+      </p>
+      <% if user_signed_in? && current_user.is_admin_user? %>
+        <%= link_to "Editar imagenes", edit_product_attachment_path(p) %>
+      <% end %>
+    <% end %>
+    </div>
+    <div class="principal-image">
+      <%= image_tag(@product.product_attachments.where(:principal => true).first.image_url(:mini)) %>
+    </div>
+
+  </div>
+  <div class="entry-summary">
+    <h1> <%= @product.name %> </h1>
+    <p><%= @product.description %></p>
+    <p><%= @product.price %></p>
+
+    <div>
+      <p>Categorías 
+      <% @product.categories.each do |category| %>
+          <%= link_to category.name, category %> 
+        </p>
+      <% end %>
+    </div>
+  </div>
+ 
+</div>
+
+
+<% if user_signed_in? && current_user.is_admin_user? %>
+  <%= link_to 'Editar', edit_product_path(@product) %> |
+  <%= link_to 'Volver', products_path %>
+<% end %>

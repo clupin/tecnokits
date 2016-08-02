@@ -1,0 +1,135 @@
+html, body{
+	background-color: #cce5ff!important;
+	margin: 0px;
+	margin-top: auto;
+    margin-right: auto;
+    margin-bottom: auto;
+    margin-left: auto;
+}
+#main-nav {
+	width: 100%;
+	margin-top: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+#container {
+	width: 90%;
+}
+.navbar {
+	border: 0;
+	border-radius: 0 !important;
+	text-align: left;
+}
+.navbar-inverse .navbar-nav {
+	margin-left: 0;
+	margin-right: 0;
+}
+.menu-align-center .responsive-logo {
+	width: 100%;
+	text-align: center;
+}
+.product-type-simple {
+	position: relative;
+}
+.woocommerce-page ul.products  {
+	margin-top: 40px;
+	float: left;
+	width: 100%;
+}
+.woocommerce-page ul.products li.product {
+	float: left;
+	margin: 0 3.8% 2.992em 0;
+	padding: 0;
+	position: relative;
+	width: 29%;
+	clear: none;
+	list-style-type: none;
+	border-top-width: 1px;
+    border-top-style: solid;
+	border-top-color: #52a1d2;
+	border-left-width: 1px;
+    border-left-style: solid;
+	border-left-color: #52a1d2;
+	border-right-width: 1px;
+    border-right-style: solid;
+	border-right-color: #52a1d2;
+	border-bottom-width: 4px;
+    border-bottom-style: solid;
+    border-bottom-color: #52a1d2;
+}
+.woocommerce-page ul.products li.product .txt-center{
+	text-align: center;
+}
+.without-underline{
+	text-decoration: none;
+}
+.woocommerce-page .product .images {
+	float: left;
+	width: 45%;
+}
+.woocommerce-page .product .images .principal-image {
+	float: left;
+	width: 80%;
+}
+.woocommerce-page .product .images .secondary-image {
+	float: left;
+	width: 10%;
+}
+.woocommerce-page .product .entry-summary {
+	float: right;
+	width: 45%;
+	padding-left: 5%;
+	margin-top: 0;
+}
+.product-link{
+	text-decoration: none;
+	text-transform: uppercase;
+	font-weight: bold;
+	min-height: 42px;
+}
+.prices{
+	font-weight: bold;
+	font-size: 16px;
+}
+.categ-descript{
+	padding-top: 34px;
+}
+.large-padding{
+	padding: 1px 130px;
+	list-style-type: none;	
+}
+.navigation-bar{
+	color: #222;
+    font-weight: 600;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+
+/*---------------------------------------
+ **   Responsive            -----
+-----------------------------------------*/
+
+@media (max-width: 1200px) {
+	
+	.header-content-wrap{
+		padding: 235px 0 150px;
+	}
+
+}
+@media (max-width: 767px) {
+
+	/* HEADER */
+	#main-nav {
+		overflow: visible;
+	}
+	#main-nav.fixed {
+		position: relative;
+	}
+	.navbar-inverse .navbar-nav {
+		padding-left: 10px;
+		line-height: normal;
+		text-align: center;
+	}
+}

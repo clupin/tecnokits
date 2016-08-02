@@ -1,0 +1,19 @@
+---
+development:
+  cloud_name: dnq7udia2
+  api_key: '438143575345544'
+  api_secret: bI4r0FkhYkxvgDGLprldGsIUwBo
+  enhance_image_tag: true
+  static_image_support: false
+production:
+  cloud_name: dnq7udia2
+  api_key: '438143575345544'
+  api_secret: bI4r0FkhYkxvgDGLprldGsIUwBo
+  enhance_image_tag: true
+  static_image_support: true
+test:
+  cloud_name: dnq7udia2
+  api_key: '438143575345544'
+  api_secret: bI4r0FkhYkxvgDGLprldGsIUwBo
+  enhance_image_tag: true
+  static_image_support: false

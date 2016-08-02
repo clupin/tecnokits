@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<h1><%= @category.name %></h1>
+<div class="categ-descript">
+	<%= @category.description %>
+</div>
+
+<ul class="products">
+	<% @category.products.order("created_at asc").each do |product| %>
+		<li class="product">
+      		<div class="txt-center">
+        		<h3><%= link_to product.name, product, :class=>"without-underline" %></h3>
+        		<p><%= link_to image_tag(product.product_attachments.where(:principal => true).first.image_url(:mini)), product %></p>
+        		<p><%= product.mini_description %></p>
+       			<p class="prices" ><%= number_to_currency(product.price, :delimiter => '.', precision: 0) %></p>
+        	</div>
+		      <% if user_signed_in? && current_user.is_admin_user? %>
+		        <p><%= link_to 'Editar', edit_product_path(product) %></p>
+		        <p><%= link_to 'Borrar', product, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+		      <% end %>
+		</li>
+	<% end %>
+
+</ul>
+
+<% if user_signed_in? && current_user.is_admin_user? %>
+	<%= link_to 'Edit', edit_category_path(@category) %> |
+	<%= link_to 'Volver', categories_path, :class=>"without-underline" %>
+<% end %>
+

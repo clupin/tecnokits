@@ -1,0 +1,55 @@
+<h2>Sign up</h2>
+
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= devise_error_messages! %>
+
+  <div class="field">
+    <%= f.label :username, "Nombre de Usuario" %><br />
+    <%= f.text_field :username, autofocus: true, class:"form-control" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :name, "Nombre" %><br />
+    <%= f.text_field :name, class:"form-control" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :lastname, "Apellido" %><br />
+    <%= f.text_field :lastname, class:"form-control" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :email, "Correo Electrónico" %><br />
+    <%= f.email_field :email %>
+  </div>
+
+  <div class="field">
+    <%= f.label :fono, "Telefono" %><br />
+    <%= f.text_field :fono %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password, "Contraseña" %>
+    <% if @minimum_password_length %>
+    <em>(<%= @minimum_password_length %> caracteres mínimo)</em>
+    <% end %><br />
+    <%= f.password_field :password, autocomplete: "off" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password_confirmation, "Confirmar Contraseña" %><br />
+    <%= f.password_field :password_confirmation, autocomplete: "off" %>
+  </div>
+
+
+  <div class="field">
+  <legend>Avatar</legend>
+  <%= f.file_field :avatar %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Registrarse" %>
+  </div>
+<% end %>
+
+<%= render "devise/shared/links" %>

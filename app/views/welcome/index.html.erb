@@ -1,0 +1,15 @@
+<h1>Bienvenido</h1>
+
+	<% if user_signed_in? %>
+	<p>Hola <%= current_user.username%>, tus datos son:</p>
+	<p>Apellido: <%= current_user.email%></p>
+	<p>Nombre: <%= current_user.name%></p>
+	<p>Apellido: <%= current_user.lastname%></p>
+	<p>Fono: <%= current_user.fono%></p>
+	<p>Permission_level: <%= current_user.permission_level%></p>
+	<p>Avatar: <%= image_tag current_user.avatar_url(:mini) %></p>
+	<% end %>
+
+<div>
+	<p>Bienvenido a Tecnokits, esta es una empresa dedicada a </p>
+</div>
