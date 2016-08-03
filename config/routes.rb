@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  devise_for :users, :skip => [:sessions]
+  devise_for :users
 
   get 'welcome/index'
 
@@ -17,12 +17,6 @@ Rails.application.routes.draw do
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
-
-  as :user do
-    get '5signin98' => 'devise/sessions#new', :as => :new_user_session
-    post '5signin98' => 'devise/sessions#create', :as => :user_session
-    delete '5signout98' => 'devise/sessions#destroy', :as => :destroy_user_session
-  end
 
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
