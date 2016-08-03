@@ -28,6 +28,11 @@
     <%= f.text_field :fono %>
   </div>
 
+  <div class="field">
+    <%= f.label :permission_level, "permission_level" %><br />
+    <%= f.text_field :permission_level %>
+  </div>
+
   <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
     <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
   <% end %>
