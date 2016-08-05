@@ -20,7 +20,7 @@
   <div class="entry-summary">
     <h1> <%= @product.name %> </h1>
     <p><%= @product.description %></p>
-    <p><%= @product.price %></p>
+    <p class="prices" ><%= number_to_currency(@product.price, :delimiter => '.', precision: 0) %></p>
 
     <div>
       <p>Categorías 

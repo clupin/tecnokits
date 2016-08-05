@@ -8,11 +8,10 @@
 </head>
 <body class="woocommerce-page">
 
-<%= render "partials/mainbar" %>
+	<%= render "partials/mainbar" %>
 
 	<%= render "partials/navigation" %>
 
-<div id="container" style="margin:0 auto;">
 	<p class="notice"><%= notice %></p>
 	<p class="alert"><%= alert %></p>
 
@@ -21,8 +20,9 @@
 	<% end %>
 
 
-	<%= yield %>
-</div>
+	<div id="container" style="margin:0 auto;">
+		<%= yield %>
+	</div>
 
 
 </body>

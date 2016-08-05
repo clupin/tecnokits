@@ -36,6 +36,8 @@ html, body{
 	margin-top: 40px;
 	float: left;
 	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
 }
 .woocommerce-page ul.products li.product {
 	float: left;
@@ -44,6 +46,7 @@ html, body{
 	position: relative;
 	width: 29%;
 	clear: none;
+	display: flex; 
 	list-style-type: none;
 	border-top-width: 1px;
     border-top-style: solid;
@@ -66,7 +69,8 @@ html, body{
 }
 .woocommerce-page .product .images {
 	float: left;
-	width: 45%;
+	width: 100%;
+	text-align: center;
 }
 .woocommerce-page .product .images .principal-image {
 	float: left;
@@ -105,20 +109,37 @@ html, body{
     text-decoration: none;
     text-transform: uppercase;
 }
+.list {
+  display: flex;
+  flex-wrap: wrap;
+}
+.list-item {
+  display: flex; 
+  padding: 0.5em;
+  width: 100%;
+}
+.list-content {
+   display: flex;
+   flex-direction: column;
+   background-color: #fff;
+   padding: 1em;
+   width: 100%;
+}
+.list-content p {
+	flex: 1 0 auto;
+}
+
+
+
+
+
 
 
 /*---------------------------------------
  **   Responsive            -----
 -----------------------------------------*/
 
-@media (max-width: 1200px) {
-	
-	.header-content-wrap{
-		padding: 235px 0 150px;
-	}
-
-}
-@media (max-width: 767px) {
+@media (min-width: 900px) and (max-width: 1250px) {
 
 	/* HEADER */
 	#main-nav {
@@ -133,3 +154,30 @@ html, body{
 		text-align: center;
 	}
 }
+
+@media (max-width: 580px) {
+
+	.woocommerce-page ul.products li.product {
+		float: left;
+		margin: 0 3.8% 2.992em 0;
+		padding: 0;
+		position: relative;
+		width: 80%;
+		clear: none;
+		display: flex; 
+		list-style-type: none;
+		border-top-width: 1px;
+	    border-top-style: solid;
+		border-top-color: #52a1d2;
+		border-left-width: 1px;
+	    border-left-style: solid;
+		border-left-color: #52a1d2;
+		border-right-width: 1px;
+	    border-right-style: solid;
+		border-right-color: #52a1d2;
+		border-bottom-width: 4px;
+	    border-bottom-style: solid;
+	    border-bottom-color: #52a1d2;
+	}
+}
+

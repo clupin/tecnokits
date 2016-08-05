@@ -41,6 +41,7 @@ class ProductsController < ApplicationController
   def update
     @product.update_attachments(params) if params[:product_attachments]
     @product.update(product_params)
+    update_categories
     respond_with(@product)
   end
 
@@ -56,6 +57,40 @@ class ProductsController < ApplicationController
 
     def product_params
       params.require(:product).permit(:name, :description, :mini_description, :price, :discount, :categories, product_attachments_attributes: [:id, :product_id, :image])
+    end
+
+    def update_categories
+      @cat = Category.all
+      @newcategories = params[:categories]
+      @cat.each do |c|
+        #si no hay nuevas categorias
+        if @newcategories.nil?
+          #categorias existentes
+          if @product.categories.include?(c)
+            #si es una categoria que se tenia, pero no se quiere agregar, entonces se quita
+            @dest = ProductCategory.where(:category_id => c.id, :product_id => @product.id).destroy_all
+          end
+        #si existe una nueva lista de categorias
+        else
+          #nuevas categorias
+          if @newcategories.include?(c.id.to_s)
+            #categorias existentes
+            if @product.categories.include?(c)
+              #si es una categoria que se quiere agregar y ademas existe (es decir, se quiere mantener), no se hace nada
+            else
+              #si es una categoria que se quiere agregar, pero no existe, entonces se agrega
+              ProductCategory.create(category_id: c.id, product_id: @product.id)
+            end
+          #categorias que no se quieren agregar
+          else
+            #categorias existentes
+            if @product.categories.include?(c)
+              #si es una categoria que se tenia, pero no se quiere agregar, entonces se quita
+              @dest = ProductCategory.where(:category_id => c.id, :product_id => @product.id).destroy_all
+            end
+          end
+        end
+      end
     end
 
     

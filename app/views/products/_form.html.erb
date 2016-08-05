@@ -27,7 +27,7 @@
     <label>Categorias</label>
     <% @categories.each do |category| %>
       <div>
-        <%= check_box_tag "categories[]", category.id %> <%= category.name %>
+        <%= check_box_tag "categories[]", category.id, @product.categories.include?(category) %> <%= category.name %>
       </div>
     <% end %>
   </div>
