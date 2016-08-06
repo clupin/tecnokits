@@ -12,12 +12,12 @@
       <% end %>
     <% end %>
     </div>
-    <div class="principal-image">
-      <%= image_tag(@product.product_attachments.where(:principal => true).first.image_url(:mini)) %>
+    <div>
+      <%= image_tag(@product.product_attachments.where(:principal => true).first.image_url, :class=>"principal-image") %>
     </div>
 
   </div>
-  <div class="entry-summary">
+  <div class="entry-summary"> 
     <h1> <%= @product.name %> </h1>
     <p><%= @product.description %></p>
     <p class="prices" ><%= number_to_currency(@product.price, :delimiter => '.', precision: 0) %></p>

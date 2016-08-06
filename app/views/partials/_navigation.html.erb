@@ -1,22 +1,16 @@
 <header>
-	<ul class="row large-padding">
-		<li class="col-md-2 navigation-bar">
+	<ul class="row large-padding navigation-bar-text">
+		<li id="top-nav" class="col-md-2 navigation-bar navigation-background">
 			<%= link_to "Principal", root_path %>
 		</li>
-		<li class="col-md-2 navigation-bar">
+		<li id="top-nav" class="col-md-2 navigation-bar navigation-background">
 			<%= link_to "Kits de Arduino", controller: "/categories", action: "show", id: "1" %>
 		</li>
-		<li class="col-md-2 navigation-bar">
+		<li id="top-nav" class="col-md-2 navigation-bar navigation-background">
 			<%= link_to "Kits Robótica", controller: "/categories", action: "show", id: "2" %>
 		</li>
-		<li class="col-md-2 navigation-bar">
+		<li id="top-nav" class="col-md-2 navigation-bar navigation-background">
 			<%= link_to "Arduino", controller: "/categories", action: "show", id: "3" %>
-		</li>
-		<li class="col-md-2 navigation-bar">
-			<%= link_to "Ciencias", controller: "/categories", action: "show", id: "4" %>
-		</li>
-		<li class="col-md-2 navigation-bar">
-			<%= link_to "Proyectos", controller: "/categories", action: "show", id: "5" %>
 		</li>
 	</ul>
 </header>

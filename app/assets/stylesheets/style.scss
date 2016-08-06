@@ -64,17 +64,26 @@ html, body{
 .woocommerce-page ul.products li.product .txt-center{
 	text-align: center;
 }
-.without-underline{
-	text-decoration: none;
-}
-.woocommerce-page .product .images {
+.woocommerce-page ul.products li.product .images {
 	float: left;
 	width: 100%;
 	text-align: center;
 }
+.txt-center{
+	text-align: center;
+}
+.without-underline{
+	text-decoration: none; 
+}
+.woocommerce-page .product .images {
+	float: left;
+	width: 45%;
+	text-align: center;
+}
 .woocommerce-page .product .images .principal-image {
 	float: left;
-	width: 80%;
+	width: 90%;
+	text-align: center;
 }
 .woocommerce-page .product .images .secondary-image {
 	float: left;
@@ -104,33 +113,56 @@ html, body{
 	list-style-type: none;	
 }
 .navigation-bar{
-	color: #222;
-    font-weight: 600;
-    text-decoration: none;
     text-transform: uppercase;
+	border-right-width: 1px;
+    border-right-style: solid;
+    border-right-color: #52a1d2;
+	border-bottom-width: 3px;
+    border-bottom-style: solid;
+    border-bottom-color: #52a1d2;
 }
-.list {
-  display: flex;
-  flex-wrap: wrap;
+.navigation-bar-text{
+	font-style: normal;
+    font-variant: normal;
+    font-weight: 600;
+    font-stretch: normal;
+    font-size: 18px;
+    line-height: 22px;
+    font-family: "Open Sans", sans-serif;
+	background-color: #d2e741;
 }
-.list-item {
-  display: flex; 
-  padding: 0.5em;
-  width: 100%;
+.navigation-background{
+	background-color: #d2e741;
 }
-.list-content {
-   display: flex;
-   flex-direction: column;
-   background-color: #fff;
-   padding: 1em;
-   width: 100%;
+.navigation-background:hover{
+	background-color: #0f0f94;
 }
-.list-content p {
-	flex: 1 0 auto;
+#top-nav a{
+    text-align: center;
+    display:block;
+    padding-top: 30px;
+    padding-bottom: 30px
 }
-
-
-
+#top-nav a:hover{
+    text-align: center;
+    display:block;
+    padding-top: 30px;
+    padding-bottom: 30px;
+	background-color: #0f0f94
+}
+.col-navbar {
+    box-sizing: border-box;
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+    -webkit-flex-basis: 16.667%;
+    -ms-flex-preferred-size: 16.667%;
+    flex-basis: 16.667%;
+    max-width: 16.667%;
+}
 
 
 
@@ -178,6 +210,17 @@ html, body{
 		border-bottom-width: 4px;
 	    border-bottom-style: solid;
 	    border-bottom-color: #52a1d2;
+	}
+	.woocommerce-page .product .images {
+		float: left;
+		width: 100%;
+		text-align: center;
+	}
+	.woocommerce-page .product .entry-summary {
+		float: right;
+		width: 100%;
+		padding-left: 5%;
+		margin-top: 0;
 	}
 }
 
