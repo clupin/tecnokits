@@ -12,7 +12,7 @@
         		<h3><%= link_to product.name, product, :class=>"without-underline" %></h3>
         		<p><%= link_to image_tag(product.product_attachments.where(:principal => true).first.image_url(:mini), :class => "images"), product %></p>
         		<p><%= product.mini_description %></p>
-       			<p class="prices" ><%= number_to_currency(product.price, :delimiter => '.', precision: 0) %></p>
+       			<p class="prices" >Consultar</p>
 		      <% if user_signed_in? && current_user.is_admin_user? %>
 		        <p><%= link_to 'Editar', edit_product_path(product) %></p>
 		        <p><%= link_to 'Borrar', product, method: :delete, data: { confirm: 'Are you sure?' } %></p>
