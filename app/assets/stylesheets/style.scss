@@ -163,6 +163,62 @@ html, body{
     flex-basis: 16.667%;
     max-width: 16.667%;
 }
+.woocommerce-page div.principal  {
+	margin-top: 40px;
+	float: left;
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+}
+.woocommerce-page div.principal div.datos {
+	float: left;
+	margin: 0 3.8% 2.992em 0;
+	padding: 0;
+	position: relative;
+	width: 45%;
+	clear: none;
+	border-top-width: 1px;
+    border-top-style: solid;
+	border-top-color: #52a1d2;
+	border-left-width: 1px;
+    border-left-style: solid;
+	border-left-color: #52a1d2;
+	border-right-width: 1px;
+    border-right-style: solid;
+	border-right-color: #52a1d2;
+	border-bottom-width: 4px;
+    border-bottom-style: solid;
+    border-bottom-color: #52a1d2;
+}
+.woocommerce-page div.principal div.datos div.title{
+	font-weight: bold;
+	background-color: #0f0f94;
+	color: white;
+	padding: 10px 10px 10px 10px
+}
+.woocommerce-page div.principal div.datos div.info{
+	text-align : justify;
+	padding: 10px 10px 0 10px;
+	margin: 10px 20px 20px 10px
+}
+.woocommerce-page div.principal div.datos .image{
+	float: right;
+	width: 50%;
+	padding: 10px 10px 0 10px;
+	text-align: center
+}
+.footer {
+	width: 100%;
+	text-align: center
+}
+.navbar-fixed-bottom {
+	float: left;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	margin-bottom: 0;
+	border-width: 1px 0 0;
+}
 
 
 
